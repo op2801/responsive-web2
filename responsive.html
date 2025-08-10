@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+        /* Base styles (mobile-first approach) */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+        nav a:hover{
+            color: blueviolet;
+            
+        }
+        h1,h2:hover{
+            color: blueviolet;
+        }
+        
+        .container {
+            padding: 1rem;
+        }
+        
+        .main-content {
+            margin-bottom: 2rem;
+        }
+        
+        .sidebar {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        
+        img {
+          max-width: 100%;
+          border-image: space;
+        }
+        
+        
+        @media (min-width: 769px) {
+            .content-wrapper {
+                display: flex;
+            }
+            
+            .main-content {
+                flex: 3;
+                margin-right: 2rem;
+            }
+            
+            .sidebar {
+                flex: 1;
+            }
+            
+            nav ul {
+                justify-content: flex-start;
+            }
+            
+            nav li {
+                margin-right: 2rem;
+            }
+        }
+        
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin-bottom: 0.5rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 0.9rem;
+            }
+        }
+        
+        
+        @media (max-width: 480px) {
+            header, nav, footer {
+                padding: 0.5rem;
+            }
+            
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Elevate Labs</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="main-content">
+                <h2>Welcome to our site</h2>
+                <img src="elevate lab.jpeg" alt="image">
+                <p>Elevate Labs is a company focused on improving cognitive skills through mobile apps and e-learning resources. Their flagship product, Elevate, is a brain training app that has won awards for its approach to improving reading, writing, and math skills. They also offer Balance, a meditation app designed to reduce stress and improve sleep. Beyond apps, Elevate Labs provides e-learning materials and internship opportunities in various IT fields, aiming to bridge the gap between education and professional success. </p>
+            </div>
+            
+            <div class="sidebar">
+                <h3>News & Updates</h3>
+                <p>Latest company news and updates will appear here.</p>
+                <p>Subscribe to our newsletter for regular updates.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
